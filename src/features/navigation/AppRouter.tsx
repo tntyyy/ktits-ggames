@@ -1,21 +1,23 @@
 import {createBrowserRouter} from "react-router-dom";
 import {AppPages} from "./types";
+import Home from "../../pages/Home/Home";
+import PageLayout from "../../layouts/PageLayout/PageLayout";
 
 export const AppRouter = createBrowserRouter([
     {
         path: AppPages.HOME,
-        element: "Home"
+        element: <PageLayout><Home /></PageLayout>
     },
     {
         path: AppPages.PRODUCT,
-        element: "product"
+        element: <PageLayout>"product"</PageLayout>
     },
     {
         path: AppPages.PROFILE,
-        element: "profile"
+        element: <PageLayout>"profile"</PageLayout>
     },
     {
         path: AppPages.NOTFOUND,
-        element: "404"
+        element: <PageLayout>"404"</PageLayout>
     }
 ]);
